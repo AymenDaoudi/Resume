@@ -1,0 +1,114 @@
+\ProvidesPackage{Commands}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand\labelitemi{}
+
+\newcommand{\EmailAddresse}[1]{
+  \includegraphics[scale=.15]{Images/MessageIcon.png} \small #1
+}
+
+\newcommand{\Addresse}[1]{
+  \includegraphics[scale=.15]{Images/HomeIcon.png} \small #1
+}
+
+\newcommand{\PhoneNumbers}[2]{
+  \faPhone{{\small #1 / }{\small #2}} 
+}
+
+
+\newcommand{\Name}[1]{
+    \fontfamily{roboto}\selectfont
+    \roboto{\mdseries \normalsize #1}
+}
+
+\newcommand{\RoleDescription}[1]{
+    \roboto{\small #1}
+}
+
+\newcommand{\WorkLocation}[1]{
+    \small{#1}
+}
+
+\newcommand{\WorkPeriod}[2]{
+    {\small{#1}} \textendash{}{\small{#2}}
+}
+
+\newcommand{\resumeItem}[2]{
+  \vspace{-6pt}
+  \item \fcolorbox{white}{white}{
+    \parbox{0.78\textwidth}{
+      \setmainfont{Segoe UI Light}  
+      \textbf{\small#1:}\fontsize{9pt}{10.8pt}\setmainfont{Segoe UI}{#2}
+    }
+  }
+  \vspace{0pt}
+}
+
+\newcommand{\environment}[1]{
+  \vspace{-8pt}
+  \setlength{\itemindent}{-30pt}
+  \item[\scriptsize \ding{118}]
+  \fcolorbox{white}{white}{
+    \parbox{0.72\textwidth}{
+      \setmainfont{Segoe UI Light} 
+      \textbf{\textit{\footnotesize Environment}}
+      \setmainfont{Segoe UI}
+      {: \footnotesize #1}
+    }}
+}
+
+\newcommand{\SkillSet}[2]{
+  \renewcommand{\labelitemi}{-}
+  \setlength{\itemindent}{-15pt}
+  \item\footnotesize{
+    \textbf{#1}{: #2}
+  }
+}
+
+\newcommand{\Certification}[3]{
+  \renewcommand{\labelitemi}{-}
+  \setlength{\itemindent}{-15pt}
+  \item\footnotesize{
+    \textbf{#1}{: #2}{(#3).}
+  }
+}
+
+\newcommand{\LanguageSet}[2]{
+  \renewcommand{\labelitemi}{-}
+  \setlength{\itemindent}{-15pt}
+  \item\footnotesize{
+    \textbf{#1}{: #2}
+  }
+}
+
+\newcommand{\resumeSubItem}[2]{
+  \vspace{-6pt}
+  \setlength{\itemindent}{.2pt}
+  \item[\textendash]
+    \fcolorbox{white}{white}{
+    \parbox{0.72\textwidth}{
+      \textbf{\scriptsize #1}{\scriptsize #2}
+    }} 
+  \vspace{0pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-4pt}
+  \item
+    \begin{tabularx}{\textwidth}{>{\hsize=1.75\hsize\raggedright\arraybackslash}X>{\hsize=.25\hsize\raggedright\arraybackslash}X}
+      \textit{\small#1} \textbf{\normalsize #2} & \footnotesize #3 \\
+                                                & \footnotesize #4 \\
+    \end{tabularx}
+  \vspace{-5pt}
+}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}\setlength{\itemindent}{-28pt}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\vspace{-20pt}\begin{itemize}\setlength{\itemindent}{-30pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{+5pt}}

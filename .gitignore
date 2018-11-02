@@ -238,5 +238,10 @@ TSWLatexianTemp*
 # standalone packages
 *.sta
 
+#vscode
+.vscode/
+settings.json
+*.vscodeLog
+
 # generated if using elsarticle.cls
 *.spl

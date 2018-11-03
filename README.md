@@ -29,7 +29,7 @@ This resume is written completely in Latex and must be compiled with **XeLatex**
 
 # Preview 
 
-![](https://github.com/AymenDaoudi/Resume/blob/master/resume.pdf)
+![This is a preview](https://github.com/AymenDaoudi/Resume/blob/master/resume.pdf)
 
 
 # License

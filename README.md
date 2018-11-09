@@ -29,8 +29,11 @@ This resume is written completely in Latex and must be compiled with **XeLatex**
 
 # Preview 
 
-![](https://github.com/AymenDaoudi/Resume/blob/master/resume.pdf)
-
+<object data="https://github.com/AymenDaoudi/Resume/blob/master/resume.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://github.com/AymenDaoudi/Resume/blob/master/resume.pdf">
+        <p><a href="https://github.com/AymenDaoudi/Resume/blob/master/resume.pdf">Preview Resume</a>.</p>
+    </embed>
+</object>
 
 # License
 

@@ -24,14 +24,38 @@ This resume template contains mainly the following list of files :
 Additionally to these sections and parts, the author can add new section types.
 
 # Compiling
-This resume is written completely in Latex and must be compiled with **XeLatex** or **Lulatex**.
-For VSCode, this can be achieved by adding to the settings.json file of VSCode preferences :
+This resume is written completely in Latex and must be compiled with **XeLatex** or **Lualatex**.
+
+## Install Libraries
+First install necessary libraries by installing tools such as [Miktex](https://miktex.org/download), [TexLive](https://tug.org/texlive/windows.html), or [ProTeXt](https://tug.org/protext/). These tools allow you to install a set of libraries related to latex and that are necessary to compile this code.
+
+For MiKTeX for example, after installing it, open MikTeX console and click on check for updates on the Overview page. Then it will show you a message saying: "There are updates available! You can review the updates on the Updates page", then click on "Updates page".
+Go then to Packages menu, click on the Update Db icon, filter by "Installed on", the select all non installed packages and lick on the "+" button to install them.
+
+## Set receipes and tools
+Set your latex receipes and tools, by editing your VSCode settings.json file and adding the following:
+
 ```yaml
 "latex-workshop.latex.recipes": [
         {
-            "name": "lualatex",
+            "name": "lualatex->biber->lualatex",
             "tools": [
                 "lualatex"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
             ]
         }
     ],
@@ -45,8 +69,48 @@ For VSCode, this can be achieved by adding to the settings.json file of VSCode p
                 "-file-line-error",
                 "%DOC%"
             ]
-        }
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "-pdf",
+              "-outdir=%OUTDIR%",
+              "%DOC%"
+            ],
+            "env": {}
+          },
+          {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "%DOC%"
+            ],
+            "env": {}
+          },
+          {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+              "%DOCFILE%"
+            ],
+            "env": {}
+          }
     ],
+    "latex-workshop.view.pdf.viewer": "tab",
 ```
 # Preview 
 

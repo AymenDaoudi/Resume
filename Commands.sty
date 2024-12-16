@@ -26,36 +26,23 @@
 }
 
 \newcommand{\WorkLocation}[1]{
-    \small{#1}
+  \footnotesize{#1}
 }
 
 \newcommand{\WorkPeriod}[2]{
-    {\small{#1}} \textendash{}{\small{#2}}
-}
-
-\newcommand{\resumeItem}[2]{
-  \vspace{-5pt}
-  \item \fcolorbox{white}{white}{
-    \parbox{0.78\textwidth}{
-      \setmainfont{Calibri}
-      \textbf{#1:}
-      \setmainfont{Calibri Light}{ #2}
-    }
-  }
-  \vspace{0pt}
+    {\footnotesize{#1}} \textendash{}{\small{#2}}
 }
 
 \newcommand{\environment}[1]{
   \vspace{-6pt}
-  \item
+  \item[\raisebox{1.3ex}{$\bullet$}]
   \fcolorbox{white}{white}{
-    \parbox{0.78\textwidth}{
-      \setmainfont{Segoe UI semibold} 
-      \textbf{\textit{\footnotesize Environment:}}
-      \setmainfont{Segoe UI}
-      {\scriptsize #1}
+    \parbox{0.82\textwidth}{
+      \setmainfont{Calibri}
+      \textbf{\small Environment:}
+      \setmainfont{Calibri}{\footnotesize #1}
     }}
-    \vspace{-2pt}
+    \vspace{0pt}
 }
 
 \newcommand{\SkillSet}[2]{
@@ -88,20 +75,32 @@
 
 \newcommand{\resumeSubItem}[2]{
   \vspace{-6pt}
-  \setlength{\itemindent}{.2pt}
+  \setlength{\itemindent}{-40pt}
   \item[\textendash]
     \fcolorbox{white}{white}{
-    \parbox{0.72\textwidth}{
-      \textbf{\scriptsize #1}{\scriptsize #2}
+    \parbox{0.82\textwidth}{
+      \textbf{\footnotesize #1}{\hspace{-11pt}\footnotesize #2}
     }} 
+  \vspace{0pt}
+}
+
+\newcommand{\resumeItem}[2]{
+  \vspace{-5pt}
+  \item [$\bullet$]\fcolorbox{white}{white}{
+    \parbox{0.82\textwidth}{
+      \setmainfont{Calibri}
+      \textbf{#1:}
+      \setmainfont{Calibri}{ #2}
+    }
+  }
   \vspace{0pt}
 }
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-3pt}
   \item
-    \begin{tabularx}
-      {\textwidth}{>{\hsize=1.75\hsize\raggedright\arraybackslash}X>{\hsize=.25\hsize\raggedright\arraybackslash}X}
+    \begin{tabularx}{\textwidth}
+      {>{\hsize=0.85\hsize\raggedright\arraybackslash}X>{\hsize=0.15\hsize\raggedleft\arraybackslash}X}
       \textit{\enspace\normalsize#1} \textbf{\normalsize #2} & \footnotesize #3 \\
                                                              & \footnotesize #4 \\
     \end{tabularx}
@@ -116,4 +115,5 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}\setlength{\itemindent}{-28pt}}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\vspace{-20pt}\begin{itemize}\setlength{\itemindent}{-30pt}}
+
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{+1pt}}

@@ -25,14 +25,12 @@
 \usepackage{multirow}
 \usepackage{array}
 \usepackage{tabularx}
-\usepackage{fontspec}
 \usepackage{float}
 \usepackage{fontawesome}
 
-
 \usepackage[rm, light]{roboto}
-\setmainfont{Segoe UI}
-
+\usepackage{helvet}
+\usepackage{textcomp}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -43,4 +41,8 @@
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
+
+% Set Roboto as the default font family
+\renewcommand{\familydefault}{\rmdefault}
+\renewcommand{\sfdefault}{roboto}
 

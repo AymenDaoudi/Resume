@@ -17,7 +17,6 @@
 }
 
 \newcommand{\Name}[1]{
-    \fontfamily{roboto}\selectfont
     \roboto{\mdseries \normalsize #1}
 }
 
@@ -38,9 +37,8 @@
   \item[\raisebox{1.3ex}{$\bullet$}]
   \fcolorbox{white}{white}{
     \parbox{0.82\textwidth}{
-      \setmainfont{Calibri}
-      \textbf{\small Environment:}
-      \setmainfont{Calibri}{\footnotesize #1}
+      \roboto{\textbf{\small Environment:}}
+      \roboto{\footnotesize #1}
     }}
     \vspace{0pt}
 }
@@ -50,7 +48,7 @@
   \renewcommand{\labelitemi}{-}
   \setlength{\itemindent}{-15pt}
   \item\footnotesize{
-    \textbf{#1}{: #2}
+    \roboto{\textbf{#1}{: #2}}
   }
   \vspace{-3pt}
 }
@@ -59,7 +57,7 @@
   \renewcommand{\labelitemi}{-}
   \setlength{\itemindent}{-15pt}
   \item\footnotesize{
-    \textbf{#1}{: #2}{(#3).}
+    \roboto{\textbf{#1}{: #2}{(#3).}}
   }
 }
 
@@ -68,7 +66,7 @@
   \renewcommand{\labelitemi}{-}
   \setlength{\itemindent}{-15pt}
   \item\footnotesize{
-    \textbf{#1}{: #2}
+    \roboto{\textbf{#1}{: #2}}
   }
   \vspace{-3pt}
 }
@@ -79,7 +77,7 @@
   \item[\textendash]
     \fcolorbox{white}{white}{
     \parbox{0.82\textwidth}{
-      \textbf{\footnotesize #1}{\hspace{-11pt}\footnotesize #2}
+      \roboto{\textbf{\footnotesize #1}}{\hspace{-11pt}\footnotesize #2}
     }} 
   \vspace{0pt}
 }
@@ -88,9 +86,8 @@
   \vspace{-5pt}
   \item [$\bullet$]\fcolorbox{white}{white}{
     \parbox{0.82\textwidth}{
-      \setmainfont{Calibri}
-      \textbf{#1:}
-      \setmainfont{Calibri}{ #2}
+      \roboto{\textbf{\small #1:}}
+      \roboto{\small #2}
     }
   }
   \vspace{0pt}

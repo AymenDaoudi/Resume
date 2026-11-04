@@ -1,48 +1,71 @@
 \ProvidesPackage{Parameters}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage{amsmath}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage{fancyhdr}
-\usepackage{pifont}
-\usepackage{xcolor}
-\usepackage[left=1cm, right=1cm, top=.7cm, bottom=.7cm]{geometry}
+\usepackage[a4paper,left=15mm,right=17mm,top=15mm,bottom=15mm]{geometry}
 \usepackage[english]{babel}
-\usepackage[utf8x]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{mathrsfs}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage[colorinlistoftodos]{todonotes}
-\usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{lmodern}
-\usepackage{adjustbox}
-\usepackage{multirow}
-\usepackage{array}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{titlesec}
 \usepackage{tabularx}
-\usepackage{float}
+\usepackage{array}
+\usepackage{needspace}
 \usepackage{fontawesome}
+\usepackage{microtype}
 
-\usepackage[rm, light]{roboto}
-\usepackage{helvet}
-\usepackage{textcomp}
+% Typography measured from Sara's reference CV. The Arial Nova fonts are
+% embedded editable fonts from that supplied PDF; Roboto ships with TeX Live.
+\setmainfont{ArialNova-Light}[
+  Path=Fonts/,
+  Extension=.ttf,
+  UprightFont=ArialNova-Light,
+  BoldFont=Arial-Bold,
+  ItalicFont=ArialNova-LightItalic,
+  BoldItalicFont=Arial-Bold,
+  BoldItalicFeatures={FakeSlant=0.2}
+]
+\newfontfamily\ResumeLight{Roboto-Light.otf}[
+  BoldFont=Roboto-Bold.otf,
+  ItalicFont=Roboto-LightItalic.otf,
+  BoldItalicFont=Roboto-BoldItalic.otf
+]
+\newfontfamily\ResumeRegular{Roboto-Regular.otf}[
+  BoldFont=Roboto-Bold.otf,
+  ItalicFont=Roboto-Italic.otf,
+  BoldItalicFont=Roboto-BoldItalic.otf
+]
+\newfontfamily\ResumeMedium{Roboto-Medium.otf}
+\newfontfamily\ResumeSlab{RobotoSlab-Regular.otf}[BoldFont=RobotoSlab-Bold.otf]
 
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
+\definecolor{ResumeInk}{HTML}{121212}
+\definecolor{ResumeMuted}{HTML}{4C4C4C}
+\definecolor{ResumeRule}{HTML}{808080}
+\definecolor{ResumeTint}{HTML}{F0F1F2}
+\definecolor{ResumeLink}{HTML}{005EB8}
+\usepackage[colorlinks=true,allcolors=ResumeLink,allbordercolors=ResumeLink]{hyperref}
+% Apply thin link underlines after hyperref initializes colored links.
+% PDF annotations preserve natural wrapping for both labels and long URLs.
+\AtBeginDocument{\hypersetup{pdfborder={0 0 0.5},pdfborderstyle={/S/U/W 0.5}}}
 
+\pagestyle{empty}
 \urlstyle{same}
-
 \raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
+% Use full justification for prose; headings, metadata, and tags set their
+% own alignment locally. Allow hyphenation to avoid stretched word spacing.
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\emergencystretch}{3em}
+\hyphenpenalty=200
+\exhyphenpenalty=50
+\clubpenalty=10000
+\widowpenalty=10000
 
-% Set Roboto as the default font family
-\renewcommand{\familydefault}{\rmdefault}
-\renewcommand{\sfdefault}{roboto}
+% Use 10.5 pt body text with 14 pt leading.
+\AtBeginDocument{\fontsize{10.5bp}{14bp}\selectfont\color{ResumeInk}}
 
+\setlist[itemize]{parsep=0pt,partopsep=0pt}
+\setlist[itemize,3]{label=\textendash,leftmargin=16pt,labelsep=4pt,
+  topsep=1pt,itemsep=0.5pt,parsep=0pt}

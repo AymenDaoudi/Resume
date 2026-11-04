@@ -1,75 +1,34 @@
 \section{Employment}
-  % Define default environment command
-  \renewcommand{\environment}[1]{
-    \vspace{-6pt}
-    \item[{$\bullet$}]
-    \fcolorbox{white}{white}{
-      \parbox{0.82\textwidth}{
-        \roboto{\textbf{Environment:}}
-        \roboto{\footnotesize #1}
-      }}
-      \vspace{0pt}
-  }
+
   \resumeSubHeadingListStart
-    \resumeSubheading
-    {Senior Software Engineer,}{Numa}{\WorkLocation{(USA) Remote.}}
+    \resumeEmploymentSubheading
+    {Senior Software Engineer}{Numa}{\WorkLocation{(USA) Remote}}
     {\WorkPeriod{June 2025}{\break \textbf{Present}}}
       \resumeItemListStart
-        \renewcommand{\resumeItem}[2]{
-          \vspace{-5pt}
-          \item [\raisebox{1ex}{$\bullet$}]\fcolorbox{white}{white}{
-            \parbox{0.82\textwidth}{
-              \roboto{\textbf{#1:}}
-              \roboto{\footnotesize #2}
-            }
-          }
-          \vspace{0pt}
-        }
-        \resumeItem{Partner Integrations}{Built and maintained integrations with Dealership Management Systems (DMS),\newline enabling seamless automation between Numa's AI platform and partner systems.}
+
+        \resumeItem{DMS \& Scheduling Integrations}{Built dealership management system (DMS) integrations for Numa's AI phone assistant, enabling appointment search, real-time availability, booking, and synchronization with dealership records.}
+
         \begin{itemize}
-          \resumeSubItem{~~}{Developed production integrations for major DMS platforms (Reynolds, CDK) using REST and SOAP APIs.}
-          \resumeSubItem{~~}{Created mock DMS environments to accelerate partner onboarding and enable reliable integration testing.}
-          \resumeSubItem{~~}{Supported DMS certification processes and assisted with pilot customer onboarding through to production.}
+          \resumeSubItem{~~}{{\ResumeMedium Led a team of five:} \href{https://www.reyrey.com/company/reynolds-data-management}{Reynolds \& Reynolds DMS} integration from design through delivery until certification on an accelerated timeline, unblocking onboarding for a large multi-rooftop dealer group (120+ dealerships).}
+          \resumeSubItem{~~}{Helped build the \href{https://www.cdkglobal.com/dms}{CDK Global DMS} integration from scratch, certify it, and maintain it for hundreds of dealerships.}
+          \resumeSubItem{~~}{Maintained and troubleshot \href{https://tekion.com/}{Tekion} and \href{https://www.dealer-fx.com/}{DealerFX} integrations.}
         \end{itemize}
-        \vspace{-5pt}
-        \item [{$\bullet$}]\fcolorbox{white}{white}{
-          \parbox{0.82\textwidth}{
-            \roboto{\textbf{AI Agent Development:}}
-            \roboto{\footnotesize Contributed to Numa's AI-powered phone assistant and next-generation voice agent platform.}
-          }
-        }
-        \vspace{0pt}
+        \resumeItem{Voice \& LLM Pipeline}{Contributed to Numa's AI-powered phone assistant across the voice and LLM call flow.}
         \begin{itemize}
-          \resumeSubItem{~~}{Built backend services for real-time AI voice agents using agentic programming patterns with LiveKit.}
-          \resumeSubItem{~~}{Leveraged AI-assisted development tools (Claude Code, MCP servers, AI agents) for rapid iteration.}
+          \resumeSubItem{~~}{Integrated LLMs, speech services, and telephony into live calls, focusing on latency, error handling, and agent safeguards.}
+          \resumeSubItem{~~}{Monitored the assistant in production, resolved dealership setup and booking failures, and fed fixes back into the integrations.}
         \end{itemize}
-        \vspace{-6pt}
-        \item[{$\bullet$}]
-        \fcolorbox{white}{white}{
-          \parbox{0.82\textwidth}{
-            \roboto{\textbf{Environment:}}
-            \roboto{\footnotesize Python, FastAPI, Flask, Django, GraphQL, REST \& SOAP APIs, Celery, GCP, Postgres, LiveKit, AI/LLM Integration.}
-          }}
-        \vspace{0pt}
-      \resumeItemListEnd
-    \resumeSubheading
-    {Senior Software Engineer,}{Divisions Maintenance Group}{\WorkLocation{(USA) Remote.}}
+        \environment{{Python (Django, FastAPI, Flask)}, REST APIs, SOAP APIs, PostgreSQL, GCP, {LLMs (Gemini, GPT)}, Deepgram, ElevenLabs, Twilio}
+      \resumeItemListEnd[5pt]
+    \resumeEmploymentSubheading
+    {Senior Software Engineer}{Divisions Maintenance Group}{\WorkLocation{(USA) Remote}}
     {\WorkPeriod{April 2022}{\break May 2025}}
       \resumeItemListStart
         \resumeItem{Software Development}{}
-        \begin{itemize}          
+        \begin{itemize}
           \resumeSubItem{~~}{Developed microservices and APIs for \href{https://divisionsmg.com/dmg-pro/}{DMG Pro}, a platform connecting maintenance providers with U.S. job opportunities.}
-          \renewcommand{\resumeSubItem}[2]{
-            \vspace{-6pt}
-            \setlength{\itemindent}{-40pt}
-            \item[\textendash] % Raise the dash slightly using \raisebox
-              \fcolorbox{white}{white}{
-              \parbox{0.82\textwidth}{
-                \roboto{\textbf{\footnotesize #1}}{\hspace{-11pt}\footnotesize #2}
-              }} 
-            \vspace{0pt}
-          }
-          \resumeSubItem{~~}{Promoted software best practices through code reviews, documentation, and technical articles.}
+
+          \resumeSubItem{~~}{Promoted software best practices through code reviews, docs, and technical articles.}
           \resumeSubItem{~~}{Implemented CI/CD pipelines using Docker and Kubernetes.}
         \end{itemize}
         \resumeItem {Design and architecture}{}
@@ -77,71 +36,45 @@
           \resumeSubItem{~~}{Built a dynamic validation system for data types (jobs, addresses, components).}
           \resumeSubItem{~~}{Created a template engine for marketing teams to manage communications.}
           \resumeSubItem{~~}{Developed a CLI tool to scaffold C\#/.NET APIs and components.}
-          \resumeSubItem{~~}{Helped teams migrate from Git flows to Microsoft Release Flow, improving efficiency and reducing bottlenecks.}
+          \resumeSubItem{~~}{Improved efficiency and reduced bottlenecks: initiated and helped teams migrate from Git flow to Microsoft Release Flow.}
           \resumeSubItem{~~}{Implemented automated Semantic Versioning (SemVer) across projects.}
           \resumeSubItem{~~}{Redesigned APIs using DDD and Onion architecture principles.}
-          \resumeSubItem{~~}{Built a local QA test environment using \textbf{Docker Compose}, \textbf{Grafana}, \textbf{Loki} and \textbf{Prometheus} to reduce costs and improve independence.}
+          \resumeSubItem{~~}{Built a local QA test environment using Docker Compose, Grafana, Loki and Prometheus to reduce costs and improve independence.}
 
-          \resumeSubItem{~~}{Enhanced integration testing using Docker for local environments and CI pipelines.}
         \end{itemize}
-        \renewcommand{\environment}[1]{
-          \vspace{-6pt}
-          \item[\raisebox{1.2ex}{$\bullet$}]
-          \fcolorbox{white}{white}{
-            \parbox{0.82\textwidth}{
-              \roboto{\textbf{Environment:}}
-              \roboto{\footnotesize #1}
-            }}
-            \vspace{0pt}
-        }
-        \environment{Microservices, gRPC, REST, Python(Django), TypeScript(NestJS), C\#(.NET8), Unit \& Integration Testing, Postgres, MongoDb, Elasticsearch, Kafka, Docker, Kubernetes, Github, AWS.}
-      \resumeItemListEnd
-    \resumeSubheading
+
+        \environment{Microservices, DDD, gRPC, REST, Python(Django), TypeScript(NestJS), C\#(.NET), Unit \& Integration Testing, Postgres, MongoDb, Elasticsearch, Kafka, Docker, Kubernetes, AWS}
+      \resumeItemListEnd[5pt]
+    % This compact entry needs five lines of reserved space instead of six.
+    \resumeEmploymentSubheading[5\baselineskip]
     {Backend Software developer}{AddEnergie}{\WorkLocation{Montréal, Qc, Ca.}}
     {\WorkPeriod{January 2022}{\break April 2022}}
       \resumeItemListStart
         \resumeItem
-        {Electric charging stations}{Building APIs and services for AddEnergie's network of electric car charging stations.}
-        \environment{Microservices, C\#(.Net core), SQLServer, MongoDb, Docker, Kafka, Kubernetes, Azure, Azure DevOps.}
-      \resumeItemListEnd
+        {Electric charging stations}{Building APIs and services for AddEnergie's network.}
+        \environment{Microservices, C\#(.Net core), SQLServer, MongoDb, Docker, Kafka, Kubernetes, Azure, Azure DevOps}
+      \resumeItemListEnd[5pt]
 
-    \resumeSubheading
-    {Full stack Software developer,}{Lloyd's Register OneOcean (ex. MarinePress)}{\WorkLocation{Montréal, Qc, Ca.}}
+    \resumeEmploymentSubheading
+    {Full stack Software developer}{Lloyd's Register OneOcean (ex. MarinePress)}{\WorkLocation{Montréal, Qc, Ca.}}
     {\WorkPeriod{March 2020}{\break January 2022}}
       \resumeItemListStart
-        \renewcommand{\resumeItem}[2]{
-          \vspace{-5pt}
-          \item [\raisebox{1ex}{$\bullet$}]\fcolorbox{white}{white}{
-            \parbox{0.82\textwidth}{
-              \roboto{\textbf{#1:}}
-              \roboto{\small #2}
-            }
-          }
-          \vspace{0pt}
-        }
+
         \resumeItem
-        {OneOcean} {Developed and maintained backend and frontend components of OneOcean, a maritime navigation software that integrates compliance, performance, and safety tools. Key contributions:}
+        {OneOcean} {a maritime navigation software that integrates compliance, performance, and safety tools.}
         \begin{itemize}
+          \resumeSubItem{~~}{Developed and maintained backend and frontend components of OneOcean.}
           \resumeSubItem{~~}{Implemented CI/CD pipelines and managed DevOps operations.}
           \resumeSubItem{~~}{Authored RFCs, documentation, \href{https://medium.com/oneoceangroup/publishing-and-consuming-debugging-symbols-for-net-core-library-d0e831f5862}{technical articles} and presentations.}
         \end{itemize}
-        \renewcommand{\environment}[1]{
-          \vspace{-6pt}
-          \item[\raisebox{1.2ex}{$\bullet$}]
-          \fcolorbox{white}{white}{
-            \parbox{0.82\textwidth}{
-              \roboto{\textbf{Environment:}}
-              \roboto{\footnotesize #1}
-            }}
-            \vspace{0pt}
-        }
-        \environment{Microservices, C\#(.Net core), Python(Django + FastAPI), TypeScript(Angular), Unit \& Integration Testing, SQLServer, MongoDb, Docker, Kafka, Kubernetes, Azure, Azure DevOps.}
-      \resumeItemListEnd
 
-    \resumeSubheading
-    {Full stack Software developer,}{Stratec global}{\WorkLocation{Montréal, Qc, Ca.}}
+        \environment{Microservices, C\#(.Net core), Python(Django + FastAPI), TypeScript(Angular), Unit \& Integration Testing, SQLServer, MongoDb, Docker, Kafka, Kubernetes, Azure, Azure DevOps}
+      \resumeItemListEnd[5pt]
+
+    \resumeEmploymentSubheading
+    {Full stack Software developer}{Stratec global}{\WorkLocation{Montréal, Qc, Ca.}}
     {\WorkPeriod{Jan 2019}{\break Mar 2020}}
-      \resumeItemListStart        
+      \resumeItemListStart
         \resumeItem
         {ITMatters} {A platform for managing financial policies, agencies and insurances. Key responsibilities include:}
         \begin{itemize}
@@ -150,113 +83,55 @@
           \resumeSubItem{~~}{Contributed to the development of a Xamarin cross-platform mobile application.}
           \resumeSubItem{~~}{Implemented CI/CD pipelines and handled various DevOps tasks.}
         \end{itemize}
-        \environment{C\#(.Net core), Unit \& Integration Testing, Xamarin, MVVM, Rx, SQLServer, Azure, Azure DevOps, AWS.}
-      \resumeItemListEnd
+        \environment{C\#(.Net core), Unit \& Integration Testing, Xamarin, MVVM, Rx, SQLServer, Azure, Azure DevOps, AWS}
+      \resumeItemListEnd[5pt]
 
-    \pagebreak
-
-    \resumeSubheading
-    {Research assistant,}{UQAM | Université du Québec À Montréal}{\WorkLocation{Montréal, Qc, Ca.}}
+    \resumeEmploymentSubheading
+    {Research assistant}{UQAM | Université du Québec À Montréal}{\WorkLocation{Montréal, Qc, Ca.}}
     {\WorkPeriod{Sep 2016}{\break Dec 2018}}
       \resumeItemListStart
-        \renewcommand{\resumeItem}[2]{
-          \vspace{-5pt}
-          \item [\raisebox{1.3ex}{$\bullet$}]\fcolorbox{white}{white}{
-            \parbox{0.82\textwidth}{
-              \roboto{\textbf{#1:}}
-              \roboto{\footnotesize #2}
-            }
-          }
-          \vspace{0pt}
-        }
-        \resumeItem{Main research project}{Automatic detection of architectural design patterns (MVC, MVP, MVVM) in Android applications. Key achievements include:}
+
+        \resumeItem{Main research project}{Automatic detection of architectural design patterns (MVC, MVP, MVVM) in Android applications.}
         \begin{itemize}
-          \renewcommand{\resumeSubItem}[2]{
-            \vspace{-6pt}
-            \setlength{\itemindent}{-40pt}
-            \item[\raisebox{0.2ex}{\textendash}] % Raise the dash slightly using \raisebox
-              \fcolorbox{white}{white}{
-              \parbox{0.82\textwidth}{
-                \roboto{\textbf{\scriptsize #1}}{\hspace{-11pt}\footnotesize #2}
-              }} 
-            \vspace{0pt}
-          }
-          \resumeSubItem{~~}{Developed a tool for static analysis on Android apps bytecode, source: \underline{\url{https://github.com/AymenDaoudi/Rimaz}}.}
-          \renewcommand{\resumeSubItem}[2]{
-            \vspace{-6pt}
-            \setlength{\itemindent}{-40pt}
-            \item[{\textendash}] % Raise the dash slightly using \raisebox
-              \fcolorbox{white}{white}{
-              \parbox{0.82\textwidth}{
-                \roboto{\textbf{\scriptsize #1}}{\hspace{-10pt}\footnotesize #2}
-              }} 
-            \vspace{0pt}
-          }
-          \resumeSubItem{~~}{Conducted bytecode exploration and empirical analysis on thousands of Android applications using the developed tool.}        
-          \resumeSubItem{~~}{Authored and published the research paper \textbf{"\textit{\underline{\href{https://dl.acm.org/citation.cfm?id=3297447&dl=ACM&coll=DL}{An Exploratory Study of MVC-based Architectural Patterns in
-          Android Apps}}}"} at (SAC'19).}
+
+          \resumeSubItem{~~}{{\ResumeRegular Android bytecode analysis:} Developed \url{https://github.com/AymenDaoudi/Rimaz}.}
+
+          \resumeSubItem{~~}{Empirical analysis on thousands of Android applications using the developed tool.}
+          \resumeSubItem{~~}{Authored and published \textbf{"\textit{\href{https://dl.acm.org/citation.cfm?id=3297447&dl=ACM&coll=DL}{An Exploratory Study of MVC-based Architectural Patterns in
+          Android Apps}}"} at (SAC'19).}
         \end{itemize}
         \resumeItem
          {CRIM | Computer Research Institute of Montreal}
-         {Plugin development and a programming language integration in Eclipse for writing flight simulator test cases.}
+         {Developed Eclipse plugins and language support for writing flight simulator tests.}
         \resumeItem{Savoir Faire Linux}
-          {Conducted a comparative study on the performance and energy consumption of VOIP serverless applications. Key activities included:}
+          {Conducted a comparative study on the performance and energy consumption of VOIP serverless applications.}
           \begin{itemize}
-            \resumeSubItem{~~}{Assessed performance and energy consumption of Jami (ex. Ring), Skype, and Tox, focusing on CPU, memory, and bandwidth usage.}
-            \renewcommand{\resumeSubItem}[2]{
-              \vspace{-6pt}
-              \setlength{\itemindent}{-40pt}
-              \item[{\textendash}] % Raise the dash slightly using \raisebox
-                \fcolorbox{white}{white}{
-                \parbox{0.82\textwidth}{
-                  \roboto{\textbf{\scriptsize #1}}{\hspace{-11pt}\footnotesize #2}
-                }} 
-              \vspace{0pt}
-            }
-            \resumeSubItem{~~}{Benchmarked and compared the results of the three applications.}
-            \resumeSubItem{~~}{Developed \textbf{Netraf}, a Linux tool for monitoring bandwidth usage. Source: \underline{\url{https://github.com/AymenDaoudi/NeTraf}}.}
+            \resumeSubItem{~~}{Studied the performance and energy consumption of Jami (ex. Ring), Skype, and Tox, focusing on CPU, memory, and bandwidth usage.}
+            \resumeSubItem{~~}{Developed \textbf{Netraf}, a Linux tool for monitoring bandwidth usage. Source: \url{https://github.com/AymenDaoudi/NeTraf}.}
           \end{itemize}
-        
-      \resumeItemListEnd
 
-    \resumeSubheading
-    {Consultant,}{Novasup}{\WorkLocation{Algiers, Algeria}}{\WorkPeriod{Feb 2016}{\break Aug 2016}}
+      \resumeItemListEnd[5pt]
+
+    \resumeEmploymentSubheading
+    {Consultant}{Novasup}{\WorkLocation{Algiers, Algeria}}{\WorkPeriod{Feb 2016}{\break Aug 2016}}
       \resumeItemListStart
-        \renewcommand{\resumeItem}[2]{
-          \vspace{-5pt}
-          \item [{$\bullet$}]\fcolorbox{white}{white}{
-            \parbox{0.82\textwidth}{
-              \roboto{\textbf{#1:}}
-              \roboto{\footnotesize #2}
-            }
-          }
-          \vspace{0pt}
-        }
+
         \resumeItem{Windows apps}
           {Developed, and published mobile apps for several Algerian newspapers on the Windows Store.}
-        \environment{C\#, UWP, MVVM, ASP.Net core, Rest, Unit \& Integration Testing, Entity Framework, SQLite.}
-      \resumeItemListEnd
-    \resumeSubheading
-    {Experience Technical Evangelist Developer (Internship),}{Microsoft}{\WorkLocation{Algiers, Algeria}}{\WorkPeriod{Dec 2015}{\break Aug 2016}}
+        \environment{C\#, UWP, MVVM, ASP.Net core, Rest, Unit \& Integration Testing, Entity Framework, SQLite}
+      \resumeItemListEnd[5pt]
+    \resumeEmploymentSubheading
+    {Experience Technical Evangelist Developer (Internship)}{Microsoft}{\WorkLocation{Algiers, Algeria}}{\WorkPeriod{Dec 2015}{\break Aug 2016}}
       \resumeItemListStart
         \resumeItem{Microsoft Azure}{Collaborated with ISVs and startups to integrate Microsoft Azure solutions.}
-        \environment{C\#, UWP, Entity Framework, Rest, Unit \& Integration Testing, SQLite, Microsoft Azure.}
-      \resumeItemListEnd
-      \resumeSubheading
-      {.Net developer,}{HydraPharm Group}{\WorkLocation{Algiers, Algeria}}{\WorkPeriod{Jan 2014}{\break Dec 2015}}
+        \environment{C\#, UWP, Entity Framework, Rest, Unit \& Integration Testing, SQLite, Microsoft Azure}
+      \resumeItemListEnd[5pt]
+      \resumeEmploymentSubheading
+      {.Net developer}{HydraPharm Group}{\WorkLocation{Algiers, Algeria}}{\WorkPeriod{Jan 2014}{\break Dec 2015}}
       \resumeItemListStart
-        \renewcommand{\resumeItem}[2]{
-          \vspace{-5pt}
-          \item [\raisebox{1.3ex}{$\bullet$}]\fcolorbox{white}{white}{
-            \parbox{0.82\textwidth}{
-              \roboto{\textbf{#1:}}
-              \roboto{\footnotesize #2}
-            }
-          }
-          \vspace{0pt}
-        }
+
         \resumeItem{Software development}{Developed internal software for reporting and sales services.}
-        \environment{C\#, WPF, MVVM, WCF, Unit \& Integration Testing, DevExpress, SQLServer 2008.}
+        \environment{C\#, WPF, MVVM, WCF, Unit \& Integration Testing, DevExpress, SQLServer 2008}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd

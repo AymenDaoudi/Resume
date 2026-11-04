@@ -1,116 +1,143 @@
 \ProvidesPackage{Commands}
 
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-\renewcommand\labelitemi{}
-
-\newcommand{\EmailAddresse}[1]{
-  \includegraphics[scale=.15]{Images/MessageIcon.png} \small #1
+\newcommand{\ContactLine}[2]{%
+  {\ResumeRegular\fontsize{9.6bp}{15bp}\selectfont
+   \makebox[16pt][l]{\color{black}#1}#2\par}%
+}
+\newcommand{\EmailAddresse}[1]{\ContactLine{\faEnvelopeO}{#1}}
+\newcommand{\Addresse}[1]{\ContactLine{\faHome}{#1}}
+\newcommand{\PhoneNumbers}[2]{\ContactLine{\faPhone}{#1#2}}
+\newcommand{\Name}[1]{{\ResumeLight #1\par}}
+\newcommand{\RoleDescription}[1]{%
+  {\ResumeLight\fontsize{12bp}{16bp}\selectfont #1\par}%
+}
+\newcommand{\WorkLocation}[1]{%
+  {\ResumeLight\fontsize{9.4bp}{12.5bp}\selectfont #1}%
+}
+\newcommand{\WorkPeriod}[2]{%
+  {\ResumeLight\fontsize{8.6bp}{12.5bp}\selectfont #1 \textendash{} #2}%
 }
 
-\newcommand{\Addresse}[1]{
-  \includegraphics[scale=.15]{Images/HomeIcon.png} \small #1
+% Job titles and descriptions share a left column; dates and locations sit
+% in the narrow right column, as in the reference. The zero-height metadata
+% box lets the first bullets start directly beneath the title.
+\newcommand{\ResumeMetadata}[2]{%
+  \parbox[t]{0.15\textwidth}{%
+    \raggedleft\leavevmode\color{ResumeMuted}#1\par\vspace{5pt}#2\par}%
 }
-
-\newcommand{\PhoneNumbers}[2]{
-  \faPhone{{\small #1}{\small #2}} 
-}
-
-\newcommand{\Name}[1]{
-    \roboto{\mdseries \normalsize #1}
-}
-
-\newcommand{\RoleDescription}[1]{
-    \roboto{\small #1}
-}
-
-\newcommand{\WorkLocation}[1]{
-  \footnotesize{#1}
-}
-
-\newcommand{\WorkPeriod}[2]{
-    {\footnotesize{#1}} \textendash{}{\small{#2}}
-}
-
-\newcommand{\environment}[1]{
-  \vspace{-6pt}
-  \item[\raisebox{1.3ex}{$\bullet$}]
-  \fcolorbox{white}{white}{
-    \parbox{0.82\textwidth}{
-      \roboto{\textbf{\small Environment:}}
-      \roboto{\footnotesize #1}
-    }}
-    \vspace{0pt}
-}
-
-\newcommand{\SkillSet}[2]{
-  \vspace{-3pt}
-  \renewcommand{\labelitemi}{-}
-  \setlength{\itemindent}{-15pt}
-  \item\footnotesize{
-    \roboto{\textbf{#1}{: #2}}
-  }
-  \vspace{-3pt}
-}
-
-\newcommand{\Certification}[3]{
-  \renewcommand{\labelitemi}{-}
-  \setlength{\itemindent}{-15pt}
-  \item\footnotesize{
-    \roboto{\textbf{#1}{: #2}{(#3).}}
-  }
-}
-
-\newcommand{\LanguageSet}[2]{
-  \vspace{-3pt}
-  \renewcommand{\labelitemi}{-}
-  \setlength{\itemindent}{-15pt}
-  \item\footnotesize{
-    \roboto{\textbf{#1}{: #2}}
-  }
-  \vspace{-3pt}
-}
-
-\newcommand{\resumeSubItem}[2]{
-  \vspace{-6pt}
-  \setlength{\itemindent}{-40pt}
-  \item[\textendash]
-    \fcolorbox{white}{white}{
-    \parbox{0.82\textwidth}{
-      \roboto{\textbf{\footnotesize #1}}{\hspace{-11pt}\footnotesize #2}
-    }} 
-  \vspace{0pt}
-}
-
-\newcommand{\resumeItem}[2]{
-  \vspace{-5pt}
-  \item [$\bullet$]\fcolorbox{white}{white}{
-    \parbox{0.82\textwidth}{
-      \roboto{\textbf{\small #1:}}
-      \roboto{\small #2}
-    }
-  }
-  \vspace{0pt}
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-3pt}
+\newcommand{\ResumeEntryHeading}[5][6\baselineskip]{%
+  \Needspace{#1}%
   \item
-    \begin{tabularx}{\textwidth}
-      {>{\hsize=0.85\hsize\raggedright\arraybackslash}X>{\hsize=0.15\hsize\raggedleft\arraybackslash}X}
-      \textit{\enspace\normalsize#1} \textbf{\normalsize #2} & \footnotesize #3 \\
-                                                             & \footnotesize #4 \\
-    \end{tabularx}
-  \vspace{-6.5pt}
+  \noindent\makebox[0pt][l]{%
+    \hspace{0.85\textwidth}%
+    \smash{\ResumeMetadata{#4}{#5}}}%
+  \begin{minipage}[t]{0.84\textwidth}
+    \raggedright
+    {#2} {#3}\par
+  \end{minipage}\par\nobreak
+}
+\newcommand{\resumeSubheading}[4]{%
+  \ResumeEntryHeading
+    {\ResumeSlab\bfseries\fontsize{11.5bp}{15bp}\selectfont #1}
+    {\ResumeRegular\fontsize{10.3bp}{14bp}\selectfont #2}
+    {#3}{#4}%
+}
+\newcommand{\resumeEmploymentSubheading}[5][6\baselineskip]{%
+  \ResumeEntryHeading[#1]
+    {\ResumeLight\mdseries\fontsize{10.3bp}{14bp}\selectfont #2~\textbar}
+    {\ResumeRegular\bfseries\fontsize{11.5bp}{15bp}\selectfont #3}
+    {#4}{#5}%
 }
 
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-5pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\newcommand{\resumeItem}[2]{%
+  \item {\ResumeRegular #1:} #2\par
+}
+% The first argument is retained for the original spacing-only placeholder.
+\newcommand{\resumeSubItem}[2]{\item #2\par}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}\setlength{\itemindent}{-28pt}}
+% Separate rounded tags, with breaks allowed only between complete tags.
+\newcommand{\ResumeTag}[1]{%
+  \tikz[baseline=(tag.base)]{%
+    \node[fill=ResumeTint,rounded corners=1.4pt,
+      inner xsep=3pt,inner ysep=1.4pt,outer sep=0pt,
+      text height=6.7pt,text depth=1.8pt] (tag) {#1};}%
+}
+\ExplSyntaxOn
+\seq_new:N \l__resume_pending_tags_seq
+\seq_new:N \l__resume_remaining_tags_seq
+\dim_new:N \l__resume_tag_row_width_dim
+\box_new:N \l__resume_tag_box
+
+% Fill each row with every remaining tag that fits before starting another.
+% This lets a shorter later tag use space left by a longer tag that must wrap.
+\cs_new_protected:Npn \__resume_tag_row:
+  {
+    \seq_clear:N \l__resume_remaining_tags_seq
+    \dim_zero:N \l__resume_tag_row_width_dim
+    \noindent
+    \seq_map_inline:Nn \l__resume_pending_tags_seq
+      {
+        \hbox_set:Nn \l__resume_tag_box {\ResumeTag{##1}}
+        \dim_compare:nNnTF {\l__resume_tag_row_width_dim} = {0pt}
+          {
+            \box_use:N \l__resume_tag_box
+            \dim_set:Nn \l__resume_tag_row_width_dim
+              {\box_wd:N \l__resume_tag_box}
+          }
+          {
+            \dim_compare:nNnTF
+              {\l__resume_tag_row_width_dim + 3pt + \box_wd:N \l__resume_tag_box}
+              > {\linewidth}
+              {\seq_put_right:Nn \l__resume_remaining_tags_seq {##1}}
+              {
+                \hspace{3pt}\box_use:N \l__resume_tag_box
+                \dim_add:Nn \l__resume_tag_row_width_dim
+                  {3pt + \box_wd:N \l__resume_tag_box}
+              }
+          }
+      }
+    \par
+    \seq_if_empty:NF \l__resume_remaining_tags_seq
+      {
+        \seq_set_eq:NN \l__resume_pending_tags_seq \l__resume_remaining_tags_seq
+        \__resume_tag_row:
+      }
+  }
+\NewDocumentCommand{\ResumeTags}{m}{
+  \seq_set_from_clist:Nn \l__resume_pending_tags_seq {#1}
+  \__resume_tag_row:
+}
+\ExplSyntaxOff
+
+% Entries are comma-separated; protect internal commas with braces, e.g.
+% {Python (Django, FastAPI, Flask)}, PostgreSQL, {LLMs (Gemini, GPT)}.
+\newcommand{\environment}[1]{%
+  \item[]\hspace*{-12pt}%
+  \begin{minipage}[t]{\dimexpr\linewidth+12pt\relax}
+    \fontsize{8.75bp}{14bp}\selectfont\ResumeRegular
+    \begin{tabularx}{\linewidth}{@{}l@{\hspace{5pt}}X@{}}
+      {\ResumeMedium Environment:} &
+      \raggedright\ResumeTags{#1}
+    \end{tabularx}
+  \end{minipage}\par
+}
+
+\newcommand{\SkillSet}[2]{\item {\ResumeMedium #1:} #2\par}
+\newcommand{\Certification}[3]{\item {\ResumeMedium #1:} #2(#3).\par}
+\newcommand{\LanguageSet}[2]{\item {\ResumeMedium #1:} #2\par}
+
+\titleformat{\section}
+  {\ResumeSlab\fontsize{15bp}{19bp}\selectfont\raggedright}
+  {}{0pt}{\MakeUppercase}
+  [\vspace{2pt}{\color{ResumeRule}\titlerule[0.35pt]}]
+\titlespacing*{\section}{0pt}{12pt}{5pt}
+
+\newcommand{\resumeSubHeadingListStart}{%
+  \begin{itemize}[label={},leftmargin=0pt,topsep=0pt,itemsep=3pt,parsep=0pt]%
+}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\vspace{-20pt}\begin{itemize}\setlength{\itemindent}{-30pt}}
-
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{+1pt}}
+\newcommand{\resumeItemListStart}{%
+  \begin{itemize}[label=\textbullet,leftmargin=12pt,rightmargin=0.16\textwidth,
+    labelsep=4pt,topsep=3pt,itemsep=3pt,parsep=0pt]%
+}
+\newcommand{\resumeItemListEnd}[1][7pt]{\end{itemize}\vspace{#1}}

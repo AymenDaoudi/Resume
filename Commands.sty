@@ -1,5 +1,10 @@
 \ProvidesPackage{Commands}
 
+% Align the header contacts with the inset right edge of the metadata column.
+\newlength{\ResumeMetadataInset}
+\setlength{\ResumeMetadataInset}{5pt}
+\newlength{\ResumeContactWidth}
+
 \newcommand{\ContactLine}[2]{%
   {\ResumeRegular\fontsize{9.6bp}{15bp}\selectfont
    \makebox[16pt][l]{\color{black}#1}#2\par}%
@@ -12,10 +17,10 @@
   {\ResumeLight\fontsize{12bp}{16bp}\selectfont #1\par}%
 }
 \newcommand{\WorkLocation}[1]{%
-  {\ResumeLight\fontsize{9.4bp}{12.5bp}\selectfont #1}%
+  {\ResumeLight\fontsize{8.5bp}{11.5bp}\selectfont #1}%
 }
 \newcommand{\WorkPeriod}[2]{%
-  {\ResumeLight\fontsize{8.6bp}{12.5bp}\selectfont #1 \textendash{} #2}%
+  {\ResumeLight\fontsize{8bp}{11.5bp}\selectfont #1 \textendash{} #2}%
 }
 
 % Job titles and descriptions share a left column; dates and locations sit
@@ -23,13 +28,13 @@
 % box lets the first bullets start directly beneath the title.
 \newcommand{\ResumeMetadata}[2]{%
   \parbox[t]{0.15\textwidth}{%
-    \raggedleft\leavevmode\color{ResumeMuted}#1\par\vspace{5pt}#2\par}%
+    \raggedleft\leavevmode\color{ResumeMuted}#1\par#2\par}%
 }
 \newcommand{\ResumeEntryHeading}[5][6\baselineskip]{%
   \Needspace{#1}%
   \item
   \noindent\makebox[0pt][l]{%
-    \hspace{0.85\textwidth}%
+    \hspace{\dimexpr0.85\textwidth-\ResumeMetadataInset\relax}%
     \smash{\ResumeMetadata{#4}{#5}}}%
   \begin{minipage}[t]{0.84\textwidth}
     \raggedright
@@ -54,6 +59,30 @@
 }
 % The first argument is retained for the original spacing-only placeholder.
 \newcommand{\resumeSubItem}[2]{\item #2\par}
+
+% Older employment entries use one description and one bullet level.
+% Keep these separate from the subsection layout used for Numa and DMG.
+\newcommand{\resumeRoleDescription}[1]{%
+  \par\nobreak\vspace{3pt}%
+  \noindent\begin{minipage}[t]{0.84\textwidth}
+    #1\par
+  \end{minipage}\par\nobreak
+}
+\newcommand{\resumeAchievementListStart}{%
+  \begin{itemize}[label=\textendash,leftmargin=12pt,rightmargin=0.16\textwidth,
+    labelsep=4pt,topsep=4pt,itemsep=2pt,parsep=0pt]%
+}
+\newcommand{\resumeAchievementListEnd}{\end{itemize}}
+\newcommand{\resumeStack}[1]{%
+  \par\nobreak\vspace{3pt}%
+  \noindent\begin{minipage}[t]{0.84\textwidth}
+    \ResumeRegular\fontsize{8.75bp}{14bp}\selectfont
+    \begin{tabularx}{\linewidth}{@{}l@{\hspace{5pt}}X@{}}
+      {\ResumeMedium Stack:} &
+      \raggedright\ResumeTags{#1}
+    \end{tabularx}
+  \end{minipage}\par\vspace{8pt}%
+}
 
 % Separate rounded tags, with breaks allowed only between complete tags.
 \newcommand{\ResumeTag}[1]{%
@@ -116,7 +145,7 @@
   \begin{minipage}[t]{\dimexpr\linewidth+12pt\relax}
     \fontsize{8.75bp}{14bp}\selectfont\ResumeRegular
     \begin{tabularx}{\linewidth}{@{}l@{\hspace{5pt}}X@{}}
-      {\ResumeMedium Environment:} &
+      {\ResumeMedium Stack:} &
       \raggedright\ResumeTags{#1}
     \end{tabularx}
   \end{minipage}\par

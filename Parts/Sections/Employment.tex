@@ -1,137 +1,128 @@
 \section{Employment}
 
-  \resumeSubHeadingListStart
-    \resumeEmploymentSubheading
-    {Senior Software Engineer}{Numa}{\WorkLocation{(USA) Remote}}
-    {\WorkPeriod{June 2025}{\break \textbf{Present}}}
-      \resumeItemListStart
+\resumeSubHeadingListStart
+  \resumeEmploymentSubheading
+  {Senior Software Engineer}{Numa}{\WorkLocation{(USA) Remote}}
+  {\WorkPeriod{June 2025}{\break 2026}}
+    \resumeRoleDescription{Built dealership management system (DMS) integrations for Numa's AI phone assistant, enabling appointment search, real-time availability, booking, and synchronization with dealership records.}
+    \resumeItemListStart
 
-        \resumeItem{DMS \& Scheduling Integrations}{Built dealership management system (DMS) integrations for Numa's AI phone assistant, enabling appointment search, real-time availability, booking, and synchronization with dealership records.}
+      \resumeItem{DMS \& Scheduling Integrations}{}
 
+      \begin{itemize}
+        \resumeSubItem{~~}{{\ResumeMedium Led a team of five} to design, deliver, and certify the \href{https://www.reyrey.com/company/reynolds-data-management}{Reynolds \& Reynolds DMS} integration on an accelerated timeline, enabling onboarding for a dealer group with more than 150 dealership rooftops.}
+        \resumeSubItem{~~}{Helped build the \href{https://www.cdkglobal.com/dms}{CDK Global DMS} integration from scratch, secure partner certification, and maintain it for hundreds of dealerships.}
+        \resumeSubItem{~~}{Built the foundation for asynchronous appointment booking, with automated retries and escalation to support.}
+        \resumeSubItem{~~}{Addressed DMS availability limitations through active polling, keeping appointment slots synchronized and up to date.}
+        \resumeSubItem{~~}{Addressed DMS search limitations by fuzzy matching mistranscribed caller information, reducing failed searches and duplicate profiles while improving appointment booking success at scale.}
+      \end{itemize}
+      \resumeItem{Voice \& LLM Pipeline}{Integrated LLMs, speech services, and telephony into Numa's AI phone assistant, focusing on latency, error handling, and agent safeguards.}
+      \begin{itemize}
+        \resumeSubItem{~~}{Resolved dealership setup and booking failures in production and incorporated fixes into the integrations.}
+      \end{itemize}
+      \environment{AI Assistants, DMS Integrations, Asynchronous Processing \& Retries, Availability Synchronization (Polling), {Python (Django, FastAPI, Flask)}, REST APIs, SOAP APIs, GraphQL, PostgreSQL, GCP, {LLMs (Gemini, GPT)}, Deepgram, ElevenLabs, Twilio}
+    \resumeItemListEnd[5pt]
+  \resumeEmploymentSubheading
+  {Senior Software Engineer}{Divisions Maintenance Group}{\WorkLocation{(USA) Remote}}
+  {\WorkPeriod{April 2022}{\break May 2025}}
+    \resumeItemListStart
+      \resumeItem{Software Development}{}
+      \begin{itemize}
+        \resumeSubItem{~~}{Developed microservices and APIs for \href{https://divisionsmg.com/dmg-pro/}{DMG Pro}, a platform that connects service providers with maintenance work across the U.S.}
+        \resumeSubItem{~~}{Implemented CI/CD pipelines using Docker and Kubernetes.}
+      \end{itemize}
+      \resumeItem {Design and Architecture}{}
+      \begin{itemize}
+        \resumeSubItem{~~}{Redesigned DMG Pro's .NET APIs using Domain-Driven Design to model maintenance workflows and Onion Architecture to keep business rules independent of infrastructure.}
+        \resumeSubItem{~~}{Built a dynamic validation system for data types (jobs, addresses, components).}
+        \resumeSubItem{~~}{Created a template engine for marketing teams to manage communications.}
+        \resumeSubItem{~~}{Developed a CLI tool to scaffold C\#/.NET APIs and components.}
+        \resumeSubItem{~~}{Initiated and supported migration from Git flow to Microsoft Release Flow, introducing automated Semantic Versioning (SemVer) across projects to improve release efficiency.}
+        \resumeSubItem{~~}{Built a local QA test environment using Docker Compose, Grafana, Loki and Prometheus to reduce costs and improve independence.}
+      \end{itemize}
+      \environment{Microservices, DDD, gRPC, REST, Python (Django), TypeScript (NestJS), C\# (.NET), SOR, Pipelines, PostgreSQL, MongoDB, Elasticsearch, Kafka, Docker, Kubernetes, AWS}
+    \resumeItemListEnd[5pt]
+
+  \resumeEmploymentSubheading[5\baselineskip]
+  {Backend Software Developer}{AddEnergie}{\WorkLocation{Montréal, Qc, Ca.}}
+  {\WorkPeriod{January 2022}{\break April 2022}}
+    \resumeItemListStart
+      \resumeItem
+      {Electric charging stations}{Built APIs and services for AddEnergie's network.}
+      \environment{Microservices, C\# (.NET Core), SQL Server, MongoDB, Docker, Kafka, Kubernetes, Azure, Azure DevOps}
+    \resumeItemListEnd[5pt]
+
+  \resumeEmploymentSubheading
+  {Full-Stack Software Developer}{Lloyd's Register OneOcean (ex. MarinePress)}{\WorkLocation{Montréal, Qc, Ca.}}
+  {\WorkPeriod{March 2020}{\break January 2022}}
+    \resumeItemListStart
+
+      \resumeItem
+      {OneOcean} {a maritime navigation software that integrates compliance, performance, and safety tools.}
+      \begin{itemize}
+        \resumeSubItem{~~}{Developed and maintained backend and frontend components of OneOcean.}
+        \resumeSubItem{~~}{Implemented CI/CD pipelines and managed DevOps operations.}
+        \resumeSubItem{~~}{Authored RFCs, documentation, \href{https://medium.com/oneoceangroup/publishing-and-consuming-debugging-symbols-for-net-core-library-d0e831f5862}{technical articles} and presentations.}
+      \end{itemize}
+
+      \environment{Microservices, C\# (.NET Core), Python (Django + FastAPI), TypeScript (Angular), Unit \& Integration Testing, SQL Server, MongoDB, Docker, Kafka, Kubernetes, Azure, Azure DevOps}
+    \resumeItemListEnd[5pt]
+
+  \resumeEmploymentSubheading
+  {Full-Stack Software Developer}{Stratec Global}{\WorkLocation{Montréal, Qc, Ca.}}
+  {\WorkPeriod{Jan 2019}{\break Mar 2020}}
+    \resumeItemListStart
+      \resumeItem
+      {ITMatters} {A platform for managing financial policies, agencies and insurances. Key responsibilities include:}
+      \begin{itemize}
+        \resumeSubItem{~~}{Analyzed customer requirements and gathered business rules.}
+        \resumeSubItem{~~}{Developed backend services for web and mobile applications and contributed to the Xamarin cross-platform app.}
+        \resumeSubItem{~~}{Implemented CI/CD pipelines and handled various DevOps tasks.}
+      \end{itemize}
+      \environment{C\# (.NET Core), Unit \& Integration Testing, Xamarin, MVVM, SQL Server, Azure, Azure DevOps}
+    \resumeItemListEnd[5pt]
+
+  \resumeEmploymentSubheading
+  {Research Assistant}{UQAM | Université du Québec À Montréal}{\WorkLocation{Montréal, Qc, Ca.}}
+  {\WorkPeriod{Sep 2016}{\break Dec 2018}}
+    \resumeItemListStart
+
+      \resumeItem{Main research project}{Automatic detection of architectural design patterns (MVC, MVP, MVVM) in Android applications.}
+      \begin{itemize}
+
+        \resumeSubItem{~~}{{\ResumeRegular Android bytecode analysis:} Developed \url{https://github.com/AymenDaoudi/Rimaz}.}
+
+        \resumeSubItem{~~}{Empirical analysis on thousands of Android applications using the developed tool.}
+        \resumeSubItem{~~}{Authored and published \textbf{"\textit{\href{https://dl.acm.org/citation.cfm?id=3297447&dl=ACM&coll=DL}{An Exploratory Study of MVC-based Architectural Patterns in
+        Android Apps}}"} at (SAC'19).}
+      \end{itemize}
+      \resumeItem
+       {CRIM | Computer Research Institute of Montreal}
+       {Developed Eclipse plugins and language support for writing flight simulator tests.}
+      \resumeItem{Savoir Faire Linux}
+        {Conducted a comparative study on the performance and energy consumption of VOIP serverless applications.}
         \begin{itemize}
-          \resumeSubItem{~~}{{\ResumeMedium Led a team of five:} \href{https://www.reyrey.com/company/reynolds-data-management}{Reynolds \& Reynolds DMS} integration from design through delivery until certification on an accelerated timeline, unblocking onboarding for a large multi-rooftop dealer group (120+ dealerships).}
-          \resumeSubItem{~~}{Helped build the \href{https://www.cdkglobal.com/dms}{CDK Global DMS} integration from scratch, certify it, and maintain it for hundreds of dealerships.}
-          \resumeSubItem{~~}{Maintained and troubleshot \href{https://tekion.com/}{Tekion} and \href{https://www.dealer-fx.com/}{DealerFX} integrations.}
-        \end{itemize}
-        \resumeItem{Voice \& LLM Pipeline}{Contributed to Numa's AI-powered phone assistant across the voice and LLM call flow.}
-        \begin{itemize}
-          \resumeSubItem{~~}{Integrated LLMs, speech services, and telephony into live calls, focusing on latency, error handling, and agent safeguards.}
-          \resumeSubItem{~~}{Monitored the assistant in production, resolved dealership setup and booking failures, and fed fixes back into the integrations.}
-        \end{itemize}
-        \environment{{Python (Django, FastAPI, Flask)}, REST APIs, SOAP APIs, PostgreSQL, GCP, {LLMs (Gemini, GPT)}, Deepgram, ElevenLabs, Twilio}
-      \resumeItemListEnd[5pt]
-    \resumeEmploymentSubheading
-    {Senior Software Engineer}{Divisions Maintenance Group}{\WorkLocation{(USA) Remote}}
-    {\WorkPeriod{April 2022}{\break May 2025}}
-      \resumeItemListStart
-        \resumeItem{Software Development}{}
-        \begin{itemize}
-          \resumeSubItem{~~}{Developed microservices and APIs for \href{https://divisionsmg.com/dmg-pro/}{DMG Pro}, a platform connecting maintenance providers with U.S. job opportunities.}
-
-          \resumeSubItem{~~}{Promoted software best practices through code reviews, docs, and technical articles.}
-          \resumeSubItem{~~}{Implemented CI/CD pipelines using Docker and Kubernetes.}
-        \end{itemize}
-        \resumeItem {Design and architecture}{}
-        \begin{itemize}
-          \resumeSubItem{~~}{Built a dynamic validation system for data types (jobs, addresses, components).}
-          \resumeSubItem{~~}{Created a template engine for marketing teams to manage communications.}
-          \resumeSubItem{~~}{Developed a CLI tool to scaffold C\#/.NET APIs and components.}
-          \resumeSubItem{~~}{Improved efficiency and reduced bottlenecks: initiated and helped teams migrate from Git flow to Microsoft Release Flow.}
-          \resumeSubItem{~~}{Implemented automated Semantic Versioning (SemVer) across projects.}
-          \resumeSubItem{~~}{Redesigned APIs using DDD and Onion architecture principles.}
-          \resumeSubItem{~~}{Built a local QA test environment using Docker Compose, Grafana, Loki and Prometheus to reduce costs and improve independence.}
-
+          \resumeSubItem{~~}{Studied the performance and energy consumption of Jami (ex. Ring), Skype, and Tox, focusing on CPU, memory, and bandwidth usage.}
+          \resumeSubItem{~~}{Developed \textbf{Netraf}, a Linux tool for monitoring bandwidth usage. Source: \url{https://github.com/AymenDaoudi/NeTraf}.}
         \end{itemize}
 
-        \environment{Microservices, DDD, gRPC, REST, Python(Django), TypeScript(NestJS), C\#(.NET), Unit \& Integration Testing, Postgres, MongoDb, Elasticsearch, Kafka, Docker, Kubernetes, AWS}
-      \resumeItemListEnd[5pt]
-    % This compact entry needs five lines of reserved space instead of six.
-    \resumeEmploymentSubheading[5\baselineskip]
-    {Backend Software developer}{AddEnergie}{\WorkLocation{Montréal, Qc, Ca.}}
-    {\WorkPeriod{January 2022}{\break April 2022}}
-      \resumeItemListStart
-        \resumeItem
-        {Electric charging stations}{Building APIs and services for AddEnergie's network.}
-        \environment{Microservices, C\#(.Net core), SQLServer, MongoDb, Docker, Kafka, Kubernetes, Azure, Azure DevOps}
-      \resumeItemListEnd[5pt]
+    \resumeItemListEnd[5pt]
 
-    \resumeEmploymentSubheading
-    {Full stack Software developer}{Lloyd's Register OneOcean (ex. MarinePress)}{\WorkLocation{Montréal, Qc, Ca.}}
-    {\WorkPeriod{March 2020}{\break January 2022}}
-      \resumeItemListStart
+  \resumeEmploymentSubheading
+  {Consultant}{Novasup}{\WorkLocation{Algiers, Algeria}}
+  {\WorkPeriod{Feb 2016}{\break Aug 2016}}
+    \resumeRoleDescription{Developed and published mobile apps for several Algerian newspapers on the Windows Store.}
+    \resumeStack{C\#, UWP, MVVM, ASP.NET Core, REST, Unit \& Integration Testing, Entity Framework, SQLite}
 
-        \resumeItem
-        {OneOcean} {a maritime navigation software that integrates compliance, performance, and safety tools.}
-        \begin{itemize}
-          \resumeSubItem{~~}{Developed and maintained backend and frontend components of OneOcean.}
-          \resumeSubItem{~~}{Implemented CI/CD pipelines and managed DevOps operations.}
-          \resumeSubItem{~~}{Authored RFCs, documentation, \href{https://medium.com/oneoceangroup/publishing-and-consuming-debugging-symbols-for-net-core-library-d0e831f5862}{technical articles} and presentations.}
-        \end{itemize}
+  \resumeEmploymentSubheading
+  {Experience Technical Evangelist Developer (Internship)}{Microsoft}{\WorkLocation{Algiers, Algeria}}
+  {\WorkPeriod{Dec 2015}{\break Aug 2016}}
+    \resumeRoleDescription{Collaborated with ISVs and startups to integrate Microsoft Azure solutions.}
+    \resumeStack{C\#, UWP, Entity Framework, REST, Unit \& Integration Testing, SQLite, Microsoft Azure}
 
-        \environment{Microservices, C\#(.Net core), Python(Django + FastAPI), TypeScript(Angular), Unit \& Integration Testing, SQLServer, MongoDb, Docker, Kafka, Kubernetes, Azure, Azure DevOps}
-      \resumeItemListEnd[5pt]
-
-    \resumeEmploymentSubheading
-    {Full stack Software developer}{Stratec global}{\WorkLocation{Montréal, Qc, Ca.}}
-    {\WorkPeriod{Jan 2019}{\break Mar 2020}}
-      \resumeItemListStart
-        \resumeItem
-        {ITMatters} {A platform for managing financial policies, agencies and insurances. Key responsibilities include:}
-        \begin{itemize}
-          \resumeSubItem{~~}{Analyzed customer requirements and gathered business rules.}
-          \resumeSubItem{~~}{Developed the backend for the main web application and a cross-platform mobile app.}
-          \resumeSubItem{~~}{Contributed to the development of a Xamarin cross-platform mobile application.}
-          \resumeSubItem{~~}{Implemented CI/CD pipelines and handled various DevOps tasks.}
-        \end{itemize}
-        \environment{C\#(.Net core), Unit \& Integration Testing, Xamarin, MVVM, Rx, SQLServer, Azure, Azure DevOps, AWS}
-      \resumeItemListEnd[5pt]
-
-    \resumeEmploymentSubheading
-    {Research assistant}{UQAM | Université du Québec À Montréal}{\WorkLocation{Montréal, Qc, Ca.}}
-    {\WorkPeriod{Sep 2016}{\break Dec 2018}}
-      \resumeItemListStart
-
-        \resumeItem{Main research project}{Automatic detection of architectural design patterns (MVC, MVP, MVVM) in Android applications.}
-        \begin{itemize}
-
-          \resumeSubItem{~~}{{\ResumeRegular Android bytecode analysis:} Developed \url{https://github.com/AymenDaoudi/Rimaz}.}
-
-          \resumeSubItem{~~}{Empirical analysis on thousands of Android applications using the developed tool.}
-          \resumeSubItem{~~}{Authored and published \textbf{"\textit{\href{https://dl.acm.org/citation.cfm?id=3297447&dl=ACM&coll=DL}{An Exploratory Study of MVC-based Architectural Patterns in
-          Android Apps}}"} at (SAC'19).}
-        \end{itemize}
-        \resumeItem
-         {CRIM | Computer Research Institute of Montreal}
-         {Developed Eclipse plugins and language support for writing flight simulator tests.}
-        \resumeItem{Savoir Faire Linux}
-          {Conducted a comparative study on the performance and energy consumption of VOIP serverless applications.}
-          \begin{itemize}
-            \resumeSubItem{~~}{Studied the performance and energy consumption of Jami (ex. Ring), Skype, and Tox, focusing on CPU, memory, and bandwidth usage.}
-            \resumeSubItem{~~}{Developed \textbf{Netraf}, a Linux tool for monitoring bandwidth usage. Source: \url{https://github.com/AymenDaoudi/NeTraf}.}
-          \end{itemize}
-
-      \resumeItemListEnd[5pt]
-
-    \resumeEmploymentSubheading
-    {Consultant}{Novasup}{\WorkLocation{Algiers, Algeria}}{\WorkPeriod{Feb 2016}{\break Aug 2016}}
-      \resumeItemListStart
-
-        \resumeItem{Windows apps}
-          {Developed, and published mobile apps for several Algerian newspapers on the Windows Store.}
-        \environment{C\#, UWP, MVVM, ASP.Net core, Rest, Unit \& Integration Testing, Entity Framework, SQLite}
-      \resumeItemListEnd[5pt]
-    \resumeEmploymentSubheading
-    {Experience Technical Evangelist Developer (Internship)}{Microsoft}{\WorkLocation{Algiers, Algeria}}{\WorkPeriod{Dec 2015}{\break Aug 2016}}
-      \resumeItemListStart
-        \resumeItem{Microsoft Azure}{Collaborated with ISVs and startups to integrate Microsoft Azure solutions.}
-        \environment{C\#, UWP, Entity Framework, Rest, Unit \& Integration Testing, SQLite, Microsoft Azure}
-      \resumeItemListEnd[5pt]
-      \resumeEmploymentSubheading
-      {.Net developer}{HydraPharm Group}{\WorkLocation{Algiers, Algeria}}{\WorkPeriod{Jan 2014}{\break Dec 2015}}
-      \resumeItemListStart
-
-        \resumeItem{Software development}{Developed internal software for reporting and sales services.}
-        \environment{C\#, WPF, MVVM, WCF, Unit \& Integration Testing, DevExpress, SQLServer 2008}
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
+  \resumeEmploymentSubheading
+  {.NET Developer}{HydraPharm Group}{\WorkLocation{Algiers, Algeria}}
+  {\WorkPeriod{Jan 2014}{\break Dec 2015}}
+    \resumeRoleDescription{Developed internal software for reporting and sales services.}
+    \resumeStack{C\#, WPF, MVVM, WCF, Unit \& Integration Testing, DevExpress, SQL Server}
+\resumeSubHeadingListEnd
